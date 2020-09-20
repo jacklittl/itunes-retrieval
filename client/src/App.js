@@ -12,39 +12,33 @@ import Listing from './components/listing';
 
 import { itunesAction } from './actions/action';
 
-// const mapStateToProps = state => ({
-//   ...state
-// })
+const mapStateToProps = state => ({
+  ...state
+})
 
-// const mapDispatchToProps = dispatch => ({
-//   itunesAction: filters => dispatch( itunesAction( filters ) )
-// })
+const mapDispatchToProps = dispatch => ({
+  itunesAction: filters => dispatch( itunesAction( filters ) )
+})
 
-function App(props){
+function App( props ) {
+
+  const dispatch = useDispatch();
 
   const [submitted, setSubmitted] = useState(false);
-  const [filters, setFilters] = useState({
-    media: "",
-    term: ""
-  });
+  const [media, setMedia] = useState("");
+  const [term, setTerm] = useState("");
 
-  const updateFilters = ( index, data ) => {
-    // let next = Object.assign( {}, this.state )
-
-    // let filters = this.state.filters
-    // filters = Object.assign( {}, filters, data )
-
-    // this.setState( ( Object.assign( {}, this.state, next, { filters: filters } ) ) )
+  const updateFilters = ( data, field ) => {
+    if( field === 'term' ){
+      setTerm(data)
+    } else if( field === 'media' ){
+      setMedia(data)
+    }
   }
 
-  const submitQuery = () => {
-      setSubmitted( true )
-
-      // let next = Object.assign( {}, this.state )
-          
-      // this.setState( Object.assign( {}, this.state, next ) )
-
-      props.itunesAction(filters)
+  const useFetchResults = () => {
+    setSubmitted( true )
+    dispatch( itunesAction( media, term ) );
   }
 
   const notFoundNotice = () => {
@@ -71,9 +65,10 @@ function App(props){
         </header>
 
         <SearchForm
-          {...filters}
-          onChange={updateFilters}
-          onSubmit={submitQuery}
+          media={media}
+          term={term}
+          updateFilters={updateFilters}
+          onSubmit={useFetchResults()}
         />
 
         <Row className="main">

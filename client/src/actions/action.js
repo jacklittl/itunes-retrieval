@@ -14,10 +14,12 @@ const getDataFailed = () => {
   };
 }
 
-export const itunesAction = ( filters ) => dispatch => {
-  let media = filters.media,
-      term = filters.term,
-      termStripped = term.split(' ').join('+');
+export const itunesAction = ( media, term ) => dispatch => {
+  let termStripped = ""
+
+  if( term !== "" && term !== undefined ){
+    termStripped = term.split(' ').join('+');
+  }
 
   fetch(`https://itunes.apple.com/search?media=${media}&term=${termStripped}`)
     .then(response => response.json())

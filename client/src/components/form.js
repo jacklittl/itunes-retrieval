@@ -14,22 +14,27 @@ const formItemLayout = {
     wrapperCol: { span: 24, md: 24 }
 }
 
-function SearchForm(props){
+const SearchForm = ( props ) => {
 
-    const onChange = ( event ) => {
-        let data = {}
-
-        // data[event.target.name] = event.target.value
-
-        // onChange(data)
+    const onChange = ( data, field ) => {
+        props.updateFilters( data, field )
     }
 
-    const selectChange = ( event, value ) => {
-        let data = {}
-        data[event] = value
-
-        onChange(data)
+    const selectChange = ( value, field ) => {
+        props.updateFilters( value, 'media' )
     }
+
+    const mediaOptions = [
+        {value: 'movie', label: 'Movie' },
+        {value: 'podcast', label: 'Podcast' },
+        {value: 'music', label: 'Music' },
+        {value: 'musicVideo', label: 'Music Video' },
+        {value: 'audioBook', label: 'Audio Book' },
+        {value: 'shortFilm', label: 'Short Film' },
+        {value: 'tvShow', label: 'TV Show' },
+        {value: 'software', label: 'Software' },
+        {value: 'all', label: 'All' }
+    ];
   
     return (
 
@@ -47,19 +52,9 @@ function SearchForm(props){
                                     name="media"
                                     value={props.media}
                                     placeholder="Title"
-                                    onChange={selectChange('media')}
-                                >
-                                    <Option value="" disabled>Select a category...</Option>
-                                    <Option value="movie">Movie</Option>
-                                    <Option value="podcast">Podcast</Option>
-                                    <Option value="music">Music</Option>
-                                    <Option value="musicVideo">Music Video</Option>
-                                    <Option value="audioBook">Audio Book</Option>
-                                    <Option value="shortFilm">Short Film</Option>
-                                    <Option value="tvShow">TV Show</Option>
-                                    <Option value="software">Software</Option>
-                                    <Option value="all">All</Option>
-                                </Select>
+                                    options={mediaOptions}
+                                    onChange={selectChange}
+                                ></Select>
                             </FormItem>
 
                         </Col>
@@ -67,14 +62,12 @@ function SearchForm(props){
                         <Col {...{ xs: 24, md: 14 }}>
             
                             <FormItem {...formItemLayout} rules={[{ required: true }]}>
-
                                 <Input
                                     name="term"
                                     value={props.term}
                                     placeholder="Search Text"
-                                    onChange={onChange()}
+                                    onChange={e => onChange(e.target.value, 'term')}
                                 />
-
                             </FormItem>
 
                         </Col>
@@ -82,14 +75,12 @@ function SearchForm(props){
                         <Col {...{ xs: 24, md: 4 }}>
 
                             <FormItem>
-                            
                                 <Button
                                     type="primary"
                                     htmlType="submit"
                                     className="submit-button"
-                                    onClick={props.onSubmit()}
+                                    onClick={props.onSubmit}
                                 >Search</Button>
-
                             </FormItem>
 
                         </Col>

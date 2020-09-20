@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import ReactDOM from 'react-dom';
 import { connect, useDispatch, useSelector } from "react-redux";
 
 import 'antd/dist/antd.css';
@@ -10,7 +9,7 @@ import { Layout, Row, Col } from 'antd';
 import SearchForm from './components/form';
 import Listing from './components/listing';
 
-import { itunesAction } from './actions/action';
+import { itunesAction } from './redux/actions/action';
 
 const mapStateToProps = state => ({
   ...state
@@ -36,7 +35,7 @@ function App( props ) {
     }
   }
 
-  const useFetchResults = () => {
+  const fetchResults = () => {
     setSubmitted( true )
     dispatch( itunesAction( media, term ) );
   }
@@ -68,7 +67,7 @@ function App( props ) {
           media={media}
           term={term}
           updateFilters={updateFilters}
-          onSubmit={useFetchResults()}
+          onSubmit={fetchResults()}
         />
 
         <Row className="main">

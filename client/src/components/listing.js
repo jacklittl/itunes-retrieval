@@ -37,7 +37,7 @@ const ListItem = ( props ) => {
 }
 
 function Listing(props){
-    
+
     const results = props.results
 
     return (

@@ -1,23 +1,15 @@
 import React, { useState, useEffect } from "react";
-import { connect, useDispatch, useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 
 import 'antd/dist/antd.css';
 import "./App.css";
 
-import { Layout, Row, Col } from 'antd';
+import { Row } from 'antd';
 
 import SearchForm from './components/form';
 import Listing from './components/listing';
 
 import { itunesAction } from './redux/actions/action';
-
-const mapStateToProps = state => ({
-  ...state
-})
-
-const mapDispatchToProps = dispatch => ({
-  itunesAction: filters => dispatch( itunesAction( filters ) )
-})
 
 function App( props ) {
 
@@ -26,6 +18,7 @@ function App( props ) {
   const [submitted, setSubmitted] = useState(false);
   const [media, setMedia] = useState("");
   const [term, setTerm] = useState("");
+  const [results, setResults] = useState({ results: [] });
 
   const updateFilters = ( data, field ) => {
     if( field === 'term' ){
@@ -36,9 +29,20 @@ function App( props ) {
   }
 
   const fetchResults = () => {
-    setSubmitted( true )
+    setSubmitted(true)
     dispatch( itunesAction( media, term ) );
+
+    console.log( results )
   }
+
+  // const fetchResults = ( itunesAction( media, term ) ) => {
+  //   const dispatch = useDispatch();
+  //   useEffect(() => {
+  //     dispatch(itunesAction( media, term ));
+  //   }, [])
+
+  //   console.log( results )
+  // }
 
   const notFoundNotice = () => {
     return (
@@ -67,23 +71,26 @@ function App( props ) {
           media={media}
           term={term}
           updateFilters={updateFilters}
-          onSubmit={fetchResults()}
+          onSubmit={fetchResults}
         />
 
         <Row className="main">
           <div className="container">
 
             {/* { submitted && ( props.reducer.results && props.reducer.results.length > 0 ) ? */}
+            { submitted ?
               <div>
                 <h2>Search results:</h2>
 
                 {/* <Listing
-                  results={props.reducer.results}
+                  results={  }
                 /> */}
+
+                <Listing />
               </div>
-            {/* :  */}
-              {/* notFoundNotice() */}
-            {/* } */}
+            :
+              notFoundNotice()
+            }
 
           </div>
         </Row>

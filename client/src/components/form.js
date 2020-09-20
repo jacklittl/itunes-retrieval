@@ -6,7 +6,7 @@ import "../App.css";
 import { Select, Input, Form, Button, Row, Col } from 'antd';
 
 const FormItem = Form.Item
-const Option = Select.Option
+// const Option = Select.Option
 
 const formItemLayout = {
     labelCol: { span: 24, md: 24 },

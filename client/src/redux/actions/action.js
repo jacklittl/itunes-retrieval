@@ -4,7 +4,7 @@ export const GET_DATA_FAILED = 'GET_DATA_FAILED'
 const getDataDone = data => {
   return {
     type: ITUNES_ACTION,
-    payload: data
+    payload: data.results
   };
 }
 

@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 import { Row } from 'antd';
 
 import { Result } from './declarations/types';
-import SearchForm from './components/form';
-import Listing from './components/listing';
-import NoResults from './components/no-results';
+import SearchForm from './components/SearchForm/SearchForm';
+import Listing from './components/Listing/Listing';
+import NoResults from './components/NoResults/NoResults';
 
 import "./App.css";
 
@@ -35,12 +35,12 @@ const App = () => {
 
           { 
             results.loading 
-              ? <NoResults /> //Show Spinner
+              ? <NoResults />
               : results.error 
-                ? <NoResults />// Show Error
+                ? <NoResults />
                 : hasResults
                     ? <Listing results={resultsPayload} />
-                    : <NoResults /> // No results
+                    : <NoResults />
           }
 
         </div>

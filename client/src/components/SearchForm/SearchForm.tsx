@@ -1,13 +1,8 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { fetchData } from '../redux/form/form.thunk';
+import { fetchData } from '../../redux/form/form.thunk';
 
 import { Row, Col, Select, Input, Form, Button } from 'antd';
-
-const formItemLayout = {
-  labelCol: { span: 24, md: 24 },
-  wrapperCol: { span: 24, md: 24 }
-};
 
 const mediaOptions = [
   {value: 'movie', label: 'Movie' },
@@ -50,7 +45,6 @@ const SearchForm = () => {
       <Row>
         <div className="container">
 
-          {/* <Row gutter={12} type="flex"> */}
           <Row gutter={12}>
                             
               <Col {...{ xs: 24, md: 6 }}>

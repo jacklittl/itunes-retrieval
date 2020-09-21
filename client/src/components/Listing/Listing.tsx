@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Row } from 'antd';
-import { Result } from '../declarations/types';
+import { Result } from '../../declarations/types';
 
-import ListItem from './list-item';
+import ListItem from '../ListItem/ListItem';
 
 type Props = {
     results: Result[];

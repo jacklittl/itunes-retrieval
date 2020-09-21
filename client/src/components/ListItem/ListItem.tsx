@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Card } from 'antd';
-import { Result } from '../declarations/types';
+import { Result } from '../../declarations/types';
 
 type Props = {
   result: Result;

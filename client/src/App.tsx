@@ -1,22 +1,24 @@
 import React from "react";
 import { useSelector } from "react-redux";
-import { Row } from 'antd';
 
 import { Result } from './declarations/types';
 import SearchForm from './components/SearchForm/SearchForm';
 import Listing from './components/Listing/Listing';
-import NoResults from './components/NoResults/NoResults';
+import ResultsMessage from './components/Messages/ResultsMessage';
 
 import "./App.css";
+
+import Box from '@material-ui/core/Box';
+import Container from '@material-ui/core/Container';
 
 const App = () => {
   const results = useSelector(state => state.form),
   resultsPayload: Result[] = results.data.payload
-  const hasResults = resultsPayload && resultsPayload.length;
+  const hasResults = resultsPayload && resultsPayload.length > 0;
 
   return (
     
-    <div className="App">
+    <Box className="App">
     
       <header className="header">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 841.9 595.3" width="100">
@@ -30,23 +32,20 @@ const App = () => {
 
       <SearchForm />
 
-      <Row className="main">
-        <div className="container">
+      <Box className="section section--grey">
 
-          { 
-            results.loading 
-              ? <NoResults />
-              : results.error 
-                ? <NoResults />
-                : hasResults
-                    ? <Listing results={resultsPayload} />
-                    : <NoResults />
+        <Container maxWidth="lg">
+
+          { hasResults
+            ? <Listing results={resultsPayload} />
+            : <ResultsMessage />
           }
 
-        </div>
-      </Row>
+        </Container>
 
-    </div>
+      </Box>
+
+    </Box>
 
   );
 }

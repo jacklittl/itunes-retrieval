@@ -1,24 +1,55 @@
 import React from "react";
-import { Col, Card } from 'antd';
+
 import { Result } from '../../declarations/types';
+
+import Card from '@material-ui/core/Card';
+import CardActionArea from '@material-ui/core/CardActionArea';
+import CardContent from '@material-ui/core/CardContent';
+import CardMedia from '@material-ui/core/CardMedia';
+import Link from '@material-ui/core/Link';
+import Typography from '@material-ui/core/Typography';
 
 type Props = {
   result: Result;
 };
 
 const ListItem = ({ result }: Props): JSX.Element => (
-  <Col>
-    <a href={result.trackViewUrl} target="_blank" rel="noopener noreferrer">
-      <Card>
-          <img className="block-image" src={result.artworkUrl100} />
-          <div className="card-body">
-            <h3>{result.trackName}</h3>
-            <h4>{result.collectionName}</h4>
-            <p>{result.artistName}</p>
-          </div>
-      </Card>
-    </a>
-  </Col>
-);
+
+  <Card>
+  
+    <CardActionArea>
+
+      <Link href={result.trackViewUrl} target="_blank" rel="noopener noreferrer">
+
+        <CardMedia
+          component="img"
+          image={result.artworkUrl100}
+          title={result.trackName}
+          alt={result.trackName}
+        />
+
+        <CardContent>
+
+          <Typography gutterBottom variant="h6" color="primary" component="h2">
+            {result.trackName}
+          </Typography>
+
+          <Typography gutterBottom variant="body2" color="textSecondary" component="p">
+            {result.artistName}
+          </Typography>
+
+          <Typography variant="body2" color="textSecondary" component="p">
+            {result.collectionName}
+          </Typography>
+
+        </CardContent>
+
+      </Link>
+
+    </CardActionArea>
+
+  </Card>
+
+)
 
 export default ( ListItem )

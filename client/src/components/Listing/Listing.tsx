@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { Row } from 'antd';
 import { Result } from '../../declarations/types';
+
+import Grid from '@material-ui/core/Grid';
+import Typography from '@material-ui/core/Typography';
 
 import ListItem from '../ListItem/ListItem';
 
@@ -8,13 +10,13 @@ type Props = {
     results: Result[];
 }
 
-const Listing = ({results}: Props): JSX.Element => {
+const Listing = ({ results }: Props): JSX.Element => {
     const [hasMoreResults, setHasMoreResults] = useState<boolean>(false);
     const [resultCount, setResultCount] = useState<number>(10);
 
-    useEffect(() => setHasMoreResults(results.length > 10), [results]);
+    useEffect(() => setHasMoreResults( results.length > 10 ), [results]);
 
-    const activeResults = results.slice(0, resultCount);
+    const activeResults = results.slice( 0, resultCount );
 
     const loadMoreResults = () => {
         if ( resultCount >= results.length ) setHasMoreResults(false);
@@ -31,18 +33,27 @@ const Listing = ({results}: Props): JSX.Element => {
     }
     
     return (
-        <>
-            <h2>Search results:</h2>
 
-            <Row gutter={12} className="result-listing">
+        <>
+
+            <Typography gutterBottom variant="h5" color="primary" component="h2">Search Results:</Typography>
+            
+            <Grid container spacing={2}>
+                
                 {activeResults.map( result => (
-                    <ListItem
-                        key={result.trackId}
-                        result={result}
-                    />
+
+                    <Grid item xs={3} key={result.trackId}>
+
+                        <ListItem result={result} />
+
+                    </Grid>
+
                 ))}
-            </Row>
+
+            </Grid>
+
         </>
+
     );
 };
 

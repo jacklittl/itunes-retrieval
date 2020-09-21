@@ -2,7 +2,21 @@ import React, { useState } from "react";
 import { useDispatch } from "react-redux";
 import { fetchData } from '../../redux/form/form.thunk';
 
-import { Row, Col, Select, Input, Form, Button } from 'antd';
+import { makeStyles } from '@material-ui/core/styles';
+import Container from '@material-ui/core/Container';
+import Grid from '@material-ui/core/Grid';
+import InputLabel from '@material-ui/core/InputLabel';
+import MenuItem from '@material-ui/core/MenuItem';
+import FormControl from '@material-ui/core/FormControl';
+import Select from '@material-ui/core/Select';
+import Button from '@material-ui/core/Button';
+import TextField from '@material-ui/core/TextField';
+
+const useStyles = makeStyles((theme) => ({
+  formControl: {
+    width: 100 + '%',
+  },
+}));
 
 const mediaOptions = [
   {value: 'movie', label: 'Movie' },
@@ -23,9 +37,11 @@ const SearchForm = () => {
     term: ''
   });
 
+  const classes = useStyles();
+
   const onChange = ( data, field ) => {
     let searchQuery = {};
-    
+
     if ( field === 'term' ) searchQuery = { term: data };
     else searchQuery = { media: data };
     
@@ -33,62 +49,75 @@ const SearchForm = () => {
   }
 
   const onSubmit = () => dispatch( fetchData( query ) );
-  
+
   return (
 
-    <Form 
+    <form 
       name="filters" 
-      className="search-form" 
-      onFinish={onSubmit} 
+      className="section" 
     >
 
-      <Row>
-        <div className="container">
+      <Container maxWidth="lg">
+            
+          <Grid container justify="center" spacing={2}>
+                          
+            <Grid item xs={12} sm={3}>
 
-          <Row gutter={12}>
-                            
-              <Col {...{ xs: 24, md: 6 }}>
+              <FormControl variant="filled" className={classes.formControl}>
 
-                <Form.Item rules={[{ required: true }]}>
-                  <Select
-                    placeholder="Title"
-                    options={mediaOptions}
-                    onChange={value => onChange(value, 'media')}
-                  />
-                </Form.Item>
+                <InputLabel id="demo-simple-select-filled-label">Title</InputLabel>
 
-              </Col>
-                            
-              <Col {...{ xs: 24, md: 14 }}>
+                <Select
+                  value={query.media}
+                  labelId="demo-simple-select-filled-label"
+                  id="demo-simple-select-filled"
+                  onChange={value => onChange(value.target.value, 'media')}
+                >
+                
+                  {mediaOptions.map( mediaOption => (
 
-                <Form.Item rules={[{ required: true }]}>
-                  <Input
-                    name="term"
-                    placeholder="Search Text"
-                    onChange={e => onChange(e.target.value, 'term')}
-                  />
-                </Form.Item>
+                    <MenuItem key={mediaOption.value} value={mediaOption.value}>{mediaOption.label}</MenuItem>
 
-              </Col>
-                            
-              <Col {...{ xs: 24, md: 4 }}>
+                  ))}
 
-                <Form.Item>
-                  <Button
-                    type="primary"
-                    htmlType="submit"
-                    className="submit-button"
-                  >Search</Button>
-                </Form.Item>
+                </Select>
 
-              </Col>
+              </FormControl>
 
-          </Row>
+            </Grid>
 
-        </div>
-      </Row>
+            <Grid item xs={12} sm={7}>
 
-    </Form>
+              <FormControl variant="filled" className={classes.formControl}>
+
+                <TextField 
+                  id="term"
+                  name="term"
+                  value={query.term}
+                  label="Search Text"
+                  onChange={e => onChange(e.target.value, 'term')}
+                  variant="filled"
+                />
+
+              </FormControl>
+
+            </Grid>
+
+            <Grid item xs={5} sm={2}>
+
+              <FormControl variant="filled" className={classes.formControl}>
+                
+                <Button variant="contained" onClick={() => onSubmit()} color="primary" size="large">Search</Button>
+              
+              </FormControl>
+
+            </Grid>
+
+        </Grid>
+
+      </Container>
+
+    </form>
   )
 };
 

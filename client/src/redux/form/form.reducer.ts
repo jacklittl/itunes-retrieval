@@ -33,14 +33,16 @@ function formReducer (state:any = initialState, action: Action): State {
         data: action.payload,
         loading: false,
         success: true,
+        error: false
       }
     }
     case actionTypes.FORM_ERROR: {
       return {
         ...state,
-        error: action.payload,
+        // data: action.payload,
+        loading: false,
         success: false,
-        loading: false 
+        error: true
       }
     }
     default: 

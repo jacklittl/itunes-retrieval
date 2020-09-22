@@ -53,8 +53,6 @@ const SearchForm = () => {
 
   const onSubmit = () => dispatch( fetchData( query ) );
 
-  console.log( query )
-
   return (
 
     <form 

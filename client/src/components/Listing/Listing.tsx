@@ -42,7 +42,7 @@ const Listing = ({ results }: Props): JSX.Element => {
                 
                 {activeResults.map( result => (
 
-                    <Grid item xs={3} key={result.trackId}>
+                    <Grid item xs={6} sm={4} md={3} lg={3} key={result.trackId}>
 
                         <ListItem result={result} />
 

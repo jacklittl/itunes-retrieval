@@ -1,16 +1,18 @@
 import React, { useState } from "react";
 import { useDispatch } from "react-redux";
-import { fetchData } from '../../redux/form/form.thunk';
+import { fetchData } from 'redux/form/form.thunk';
 
-import { makeStyles } from '@material-ui/core/styles';
-import Container from '@material-ui/core/Container';
-import Grid from '@material-ui/core/Grid';
-import InputLabel from '@material-ui/core/InputLabel';
-import MenuItem from '@material-ui/core/MenuItem';
-import FormControl from '@material-ui/core/FormControl';
-import Select from '@material-ui/core/Select';
-import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
+import {
+  makeStyles,
+  Container,
+  Grid,
+  InputLabel,
+  MenuItem,
+  FormControl,
+  Select,
+  Button,
+  TextField,
+} from '@material-ui/core';
 
 const useStyles = makeStyles((theme) => ({
   formControl: {
@@ -30,9 +32,14 @@ const mediaOptions = [
   {value: 'all', label: 'All' }
 ];
 
+type Query = {
+  media?: string,
+  term?: string
+}
+
 const SearchForm = () => {
   const dispatch = useDispatch();
-  const [query, setQuery] = useState({
+  const [query, setQuery] = useState<Query>({
     media: '',
     term: ''
   });
@@ -40,15 +47,13 @@ const SearchForm = () => {
   const classes = useStyles();
 
   const onChange = ( data, field ) => {
-    let searchQuery = {};
-
-    if ( field === 'term' ) searchQuery = { term: data };
-    else searchQuery = { media: data };
-    
-    setQuery({...query, ...searchQuery});
+    if ( field === 'term' ) setQuery({...query, term: data });
+    else setQuery({...query, media: data });
   }
 
   const onSubmit = () => dispatch( fetchData( query ) );
+
+  console.log( query )
 
   return (
 

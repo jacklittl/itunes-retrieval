@@ -39,7 +39,7 @@ function formReducer (state:any = initialState, action: Action): State {
     case actionTypes.FORM_ERROR: {
       return {
         ...state,
-        // data: action.payload,
+        data: action.payload,
         loading: false,
         success: false,
         error: true

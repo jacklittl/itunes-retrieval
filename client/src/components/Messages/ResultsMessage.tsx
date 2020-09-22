@@ -6,7 +6,8 @@ import Typography from '@material-ui/core/Typography';
 const ResultsMessage = (): JSX.Element => {
   const results = useSelector(state => state.form)
 
-  let searchTitle = ""
+  let searchTitle:string;
+
   results.error 
     ? searchTitle = "Error retrieving your results."
     : results.loading 

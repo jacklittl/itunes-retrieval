@@ -1,15 +1,19 @@
 import React from "react";
 import { useSelector } from "react-redux";
-
 import { Result } from './declarations/types';
-import SearchForm from './components/SearchForm/SearchForm';
-import Listing from './components/Listing/Listing';
-import ResultsMessage from './components/Messages/ResultsMessage';
+import {
+  SearchForm,
+  Listing,
+  ResultsMessage,
+} from './components';
+
+import { 
+  Box,
+  Container
+} from '@material-ui/core';
 
 import "./App.css";
 
-import Box from '@material-ui/core/Box';
-import Container from '@material-ui/core/Container';
 
 const App = () => {
   const results = useSelector(state => state.form),

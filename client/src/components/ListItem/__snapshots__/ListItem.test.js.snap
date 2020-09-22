@@ -1,0 +1,125 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`List Item Render List Item Renders 1`] = `
+<div
+  className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+>
+  <button
+    className="MuiButtonBase-root MuiCardActionArea-root"
+    disabled={false}
+    onBlur={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <a
+      className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+      href="https://music.apple.com/us/album/best-of-you/300855107?i=300855110&uo=4"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="Best of You"
+        className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img"
+        src="https://is2-ssl.mzstatic.com/image/thumb/Music/v4/e4/23/35/e4233532-42dc-7ece-d18b-b9b2733cb4e6/source/100x100bb.jpg"
+        title="Best of You"
+      />
+      <div
+        className="MuiCardContent-root"
+      >
+        <h2
+          className="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary MuiTypography-gutterBottom"
+        >
+          Best of You
+        </h2>
+        <p
+          className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-gutterBottom"
+        >
+          Foo Fighters
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+        >
+          In Your Honor
+        </p>
+      </div>
+    </a>
+    <span
+      className="MuiCardActionArea-focusHighlight"
+    />
+  </button>
+</div>
+`;
+
+exports[`List Item Render snapshot renders 1`] = `
+<div
+  className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+>
+  <button
+    className="MuiButtonBase-root MuiCardActionArea-root"
+    disabled={false}
+    onBlur={[Function]}
+    onDragLeave={[Function]}
+    onFocus={[Function]}
+    onKeyDown={[Function]}
+    onKeyUp={[Function]}
+    onMouseDown={[Function]}
+    onMouseLeave={[Function]}
+    onMouseUp={[Function]}
+    onTouchEnd={[Function]}
+    onTouchMove={[Function]}
+    onTouchStart={[Function]}
+    tabIndex={0}
+    type="button"
+  >
+    <a
+      className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+      href="https://music.apple.com/us/album/best-of-you/300855107?i=300855110&uo=4"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      rel="noopener noreferrer"
+      target="_blank"
+    >
+      <img
+        alt="Best of You"
+        className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img"
+        src="https://is2-ssl.mzstatic.com/image/thumb/Music/v4/e4/23/35/e4233532-42dc-7ece-d18b-b9b2733cb4e6/source/100x100bb.jpg"
+        title="Best of You"
+      />
+      <div
+        className="MuiCardContent-root"
+      >
+        <h2
+          className="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary MuiTypography-gutterBottom"
+        >
+          Best of You
+        </h2>
+        <p
+          className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-gutterBottom"
+        >
+          Foo Fighters
+        </p>
+        <p
+          className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+        >
+          In Your Honor
+        </p>
+      </div>
+    </a>
+    <span
+      className="MuiCardActionArea-focusHighlight"
+    />
+  </button>
+</div>
+`;

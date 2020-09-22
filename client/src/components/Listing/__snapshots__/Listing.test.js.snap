@@ -1,0 +1,281 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Listing Render Listing Renders 1`] = `
+Array [
+  <h2
+    className="MuiTypography-root MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"
+  >
+    Search Results:
+  </h2>,
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-3"
+    >
+      <div
+        className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <a
+            className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+            href="https://music.apple.com/us/album/best-of-you/300855107?i=300855110&uo=4"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Best of You"
+              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img"
+              src="https://is2-ssl.mzstatic.com/image/thumb/Music/v4/e4/23/35/e4233532-42dc-7ece-d18b-b9b2733cb4e6/source/100x100bb.jpg"
+              title="Best of You"
+            />
+            <div
+              className="MuiCardContent-root"
+            >
+              <h2
+                className="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary MuiTypography-gutterBottom"
+              >
+                Best of You
+              </h2>
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-gutterBottom"
+              >
+                Foo Fighters
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+              >
+                In Your Honor
+              </p>
+            </div>
+          </a>
+          <span
+            className="MuiCardActionArea-focusHighlight"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-3"
+    >
+      <div
+        className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <a
+            className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+            href="https://music.apple.com/us/album/everlong-acoustic-version/334811953?i=334812065&uo=4"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Everlong"
+              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img"
+              src="https://is5-ssl.mzstatic.com/image/thumb/Music3/v4/41/b0/26/41b02667-a47c-e969-71f6-918825311607/source/100x100bb.jpg"
+              title="Everlong"
+            />
+            <div
+              className="MuiCardContent-root"
+            >
+              <h2
+                className="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary MuiTypography-gutterBottom"
+              >
+                Everlong
+              </h2>
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-gutterBottom"
+              >
+                Foo Fighters
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+              >
+                Greatest Hits
+              </p>
+            </div>
+          </a>
+          <span
+            className="MuiCardActionArea-focusHighlight"
+          />
+        </button>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Listing Render snapshot renders 1`] = `
+Array [
+  <h2
+    className="MuiTypography-root MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"
+  >
+    Search Results:
+  </h2>,
+  <div
+    className="MuiGrid-root MuiGrid-container MuiGrid-spacing-xs-2"
+  >
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-3"
+    >
+      <div
+        className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <a
+            className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+            href="https://music.apple.com/us/album/best-of-you/300855107?i=300855110&uo=4"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Best of You"
+              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img"
+              src="https://is2-ssl.mzstatic.com/image/thumb/Music/v4/e4/23/35/e4233532-42dc-7ece-d18b-b9b2733cb4e6/source/100x100bb.jpg"
+              title="Best of You"
+            />
+            <div
+              className="MuiCardContent-root"
+            >
+              <h2
+                className="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary MuiTypography-gutterBottom"
+              >
+                Best of You
+              </h2>
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-gutterBottom"
+              >
+                Foo Fighters
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+              >
+                In Your Honor
+              </p>
+            </div>
+          </a>
+          <span
+            className="MuiCardActionArea-focusHighlight"
+          />
+        </button>
+      </div>
+    </div>
+    <div
+      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6 MuiGrid-grid-sm-4 MuiGrid-grid-md-3 MuiGrid-grid-lg-3"
+    >
+      <div
+        className="MuiPaper-root MuiCard-root MuiPaper-elevation1 MuiPaper-rounded"
+      >
+        <button
+          className="MuiButtonBase-root MuiCardActionArea-root"
+          disabled={false}
+          onBlur={[Function]}
+          onDragLeave={[Function]}
+          onFocus={[Function]}
+          onKeyDown={[Function]}
+          onKeyUp={[Function]}
+          onMouseDown={[Function]}
+          onMouseLeave={[Function]}
+          onMouseUp={[Function]}
+          onTouchEnd={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          tabIndex={0}
+          type="button"
+        >
+          <a
+            className="MuiTypography-root MuiLink-root MuiLink-underlineHover MuiTypography-colorPrimary"
+            href="https://music.apple.com/us/album/everlong-acoustic-version/334811953?i=334812065&uo=4"
+            onBlur={[Function]}
+            onFocus={[Function]}
+            rel="noopener noreferrer"
+            target="_blank"
+          >
+            <img
+              alt="Everlong"
+              className="MuiCardMedia-root MuiCardMedia-media MuiCardMedia-img"
+              src="https://is5-ssl.mzstatic.com/image/thumb/Music3/v4/41/b0/26/41b02667-a47c-e969-71f6-918825311607/source/100x100bb.jpg"
+              title="Everlong"
+            />
+            <div
+              className="MuiCardContent-root"
+            >
+              <h2
+                className="MuiTypography-root MuiTypography-h6 MuiTypography-colorPrimary MuiTypography-gutterBottom"
+              >
+                Everlong
+              </h2>
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary MuiTypography-gutterBottom"
+              >
+                Foo Fighters
+              </p>
+              <p
+                className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+              >
+                Greatest Hits
+              </p>
+            </div>
+          </a>
+          <span
+            className="MuiCardActionArea-focusHighlight"
+          />
+        </button>
+      </div>
+    </div>
+  </div>,
+]
+`;

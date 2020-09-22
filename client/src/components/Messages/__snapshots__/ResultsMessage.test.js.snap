@@ -1,0 +1,31 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Results Message Render Results Message Renders 1`] = `
+<div>
+  <h2
+    className="MuiTypography-root MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"
+  >
+    iTunes Search:
+  </h2>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+  >
+    Please search for your favourite bands, artists, movies etc above. Alternatively, if no results could be found, please try altering you search.
+  </p>
+</div>
+`;
+
+exports[`Results Message Render snapshot renders 1`] = `
+<div>
+  <h2
+    className="MuiTypography-root MuiTypography-h5 MuiTypography-colorPrimary MuiTypography-gutterBottom"
+  >
+    iTunes Search:
+  </h2>
+  <p
+    className="MuiTypography-root MuiTypography-body2 MuiTypography-colorTextSecondary"
+  >
+    Please search for your favourite bands, artists, movies etc above. Alternatively, if no results could be found, please try altering you search.
+  </p>
+</div>
+`;
